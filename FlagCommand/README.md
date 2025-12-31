@@ -38,7 +38,7 @@ Result: The game recognized the command and printed the flag.
 <img width="1325" height="264" alt="image" src="https://github.com/user-attachments/assets/4699a66d-e065-4867-a4cd-f742315763a5" />
 
 Flag
-HTB{w3b_1nsp3ct_4nd_c0ns0l3_f72q} (Replace this with the actual flag you found!)
+HTB{D3v3l0p3r_t00l5_4r3_b35t__t0015_wh4t_d0_y0u_Th1nk??}
 
 Key Takeaways
 Client-Side Secrets: Never trust the client. If a list of "allowed" commands is sent to the browser, a user can always find them by inspecting the traffic or the console.
