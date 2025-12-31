@@ -28,6 +28,7 @@ Bash
 
 strings pass
 
+<img width="681" height="688" alt="Screenshot from 2025-12-30 22-23-52" src="https://github.com/user-attachments/assets/1f408a83-0829-46fe-ba58-34a713a89685" />
 
 Scanning through the output, I identified a unique string that looked like a password."s3cr3t_p455_f0r_gh05t5_4nd_gh0ul5"
 
