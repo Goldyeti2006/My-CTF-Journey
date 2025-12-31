@@ -47,6 +47,8 @@ chmod +x pass
 5. Capturing the Flag
 Once the program was running, it prompted me for a password. I entered the string found during the strings analysis. The program validated the password and printed the flag to the terminal.
 
+<img width="681" height="118" alt="Screenshot from 2025-12-30 22-58-25" src="https://github.com/user-attachments/assets/1e30489f-f5d2-45cf-a726-2f0cdbd6385d" />
+
 FlagHTB{un0bfu5c4t3d_5tr1ng5}
 
 Key Takeaways
