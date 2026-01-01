@@ -3,3 +3,6 @@ A collection of write-ups and solutions for Hack The Box challenges.
 
 ## Reversing Challenges
 * [SpookyPass](./SpookyPass/README.md) - Very Easy
+
+## 🏁 Starting Point
+* [Tier 0](./Starting-Point/Tier-0/README.md) - The Fundamentals (Meow, Fawn, Dancing, Redeemer)
