@@ -1,1 +1,42 @@
+# HTB Sherlock: Brutus - Writeup
 
+## Challenge Information
+* **Platform:** Hack The Box
+* **Category:** Digital Forensics & Incident Response (DFIR)
+* **Difficulty:** Easy
+
+---
+
+## Scenario
+The objective was to analyze a Linux system's logs to investigate a successful brute-force attack. I had to identify the attacker's IP, the compromised account, the timestamps of the attack, and the persistence mechanisms used.
+
+---
+
+## Investigation Steps
+
+### 1. Log Analysis with `journalctl`
+I began by examining the authentication logs. Since modern Linux systems use `systemd`, I utilized `journalctl` to parse the logs and filter for login-related events.
+
+* **Tool Used:** `journalctl -u systemd-logind`
+* **Discovery:** I identified a massive volume of failed login attempts targeting a specific user account. This confirmed a **Brute Force Attack (MITRE T1110)**.
+
+### 2. Identifying Login Sessions with `utmpdump`
+To find out exactly when the attacker successfully logged in, I analyzed the `wtmp` files. These files record historical login/logout activity and are not human-readable without a parser.
+
+* **Tool Used:** `utmpdump /var/log/wtmp`
+* **Discovery:** By comparing the failed attempts in the auth logs with the successful session starts in `wtmp`, I pinpointed the exact timestamp of the successful compromise.
+
+### 3. MITRE ATT&CK Mapping
+During the investigation, I mapped the attacker's behavior to the **MITRE ATT&CK Framework**:
+* **T1110 (Brute Force):** The initial access method used to guess the password.
+* **T1078 (Valid Accounts):** Once the password was guessed, the attacker used a legitimate account to persist in the system.
+
+### 4. Overcoming Challenges
+The biggest hurdle was the volume of data. Thousands of login attempts were logged within a short window. I had to carefully track the timestamps to distinguish between the "noisy" failed attempts and the single successful login that occurred right before the attacker's malicious activity began.
+
+---
+
+## Technical Skills Demonstrated
+* **Linux Forensics:** Navigating `/var/log` and using `journalctl` and `utmpdump`.
+* **Log Correlation:** Matching entries from `auth.log` and `wtmp` to build a timeline.
+* **Threat Mapping:** Using the MITRE ATT&CK framework to standardize incident reporting.
