@@ -10,6 +10,6 @@ A collection of write-ups and solutions for Hack The Box challenges.
 ## 🏁 Starting Point
 * [Tier 0](./Starting-Point/Tier-0/README.md) - The Fundamentals (Meow, Fawn, Dancing, Redeemer)
 
-##  Sherlocks
-* (./Sherlocks/Brutus.md)
-
+## 🔍 Sherlocks
+* [Brutus](./Sherlocks/Brutus.md) - Investigating a Linux Brute-Force attack.
+* [Campfire-1](./Sherlocks/Campfire-1/README.md) - Analysis of [Insert Brief Description].
