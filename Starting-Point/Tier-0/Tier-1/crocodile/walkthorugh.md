@@ -17,6 +17,8 @@ Port 21 (FTP): vsftpd 3.0.3 (Anonymous login allowed)
 
 Port 80 (HTTP): Apache httpd 2.4.41
 
+<img width="877" height="221" alt="image" src="https://github.com/user-attachments/assets/9a67ebf1-6022-449a-b30f-be3c857b1f51" />
+
 Phase 2: FTP Enumeration
 Since anonymous login was enabled, I accessed the FTP server to check for sensitive files:
 ftp 10.129.x.x (Logged in as anonymous)
@@ -29,6 +31,9 @@ allowed.userlist.passwd
 
 Note: These files contained a list of potential usernames and their corresponding passwords, which are critical for the next phase.
 
+<img width="1244" height="563" alt="Screenshot 2026-03-03 025131" src="https://github.com/user-attachments/assets/254a6781-f21e-454b-a636-5e8a17e1cbf9" />
+
+ 
 3. Web Enumeration
 I navigated to the web server on port 80. The landing page was a static corporate site. To find administrative entry points, I performed directory brute-forcing.
 
@@ -40,6 +45,9 @@ Key Discovery:
 
 /login.php (The administrative login portal)
 
+<img width="970" height="678" alt="Screenshot 2026-03-03 025313" src="https://github.com/user-attachments/assets/54ca4b97-17fb-4ddb-8dc4-d4d58619a623" />
+
+ 
 4. Exploitation & Foothold
 Administrative Access
 Using the credentials harvested from the FTP service, I attempted to log in to /login.php.
@@ -49,6 +57,9 @@ Username: admin (or the specific name from your userlist)
 Password: [The password you found]
 
 Successful authentication granted access to the internal dashboard, where the user flag was located.
+
+<img width="722" height="187" alt="Screenshot 2026-03-03 025149" src="https://github.com/user-attachments/assets/9e243fa8-9054-46eb-bfb5-2146f7abc6f3" />
+
 
 5. Post-Exploitation & Flags
 User Flag
