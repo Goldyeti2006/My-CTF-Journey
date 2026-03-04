@@ -56,7 +56,8 @@ Once inside the dashboard, the user flag was displayed (or found in a specific f
 
 Path: Dashboard / Home
 
-Flag: [Paste your flag hash here]
+<img width="1531" height="696" alt="image" src="https://github.com/user-attachments/assets/8a3e4ddc-0741-4ae0-bc00-f324174fa59e" />
+
 
 6. Conclusion & Lessons Learned
 Information Leakage: Anonymous FTP access provided the initial credentials. Never allow anonymous login on servers containing sensitive user lists.
