@@ -1,7 +1,7 @@
 # WingData HTB: From Unauthenticated RCE to CVE-2025-4517 Root
 
 ## 📝 Executive Summary
-WingData is a medium-to-hard Linux machine on Hack The Box that highlights the dangers of misconfigured third-party applications and the critical nature of path traversal vulnerabilities in standard libraries. This assessment covers initial access via Wing FTP Server, lateral movement through credential cracking with custom salts, and a final privilege escalation leveraging a logic flaw in the Python `tarfile` module (**CVE-2025-4517**).
+WingData is a easy-to-medium Linux machine on Hack The Box that highlights the dangers of misconfigured third-party applications and the critical nature of path traversal vulnerabilities in standard libraries. This assessment covers initial access via Wing FTP Server, lateral movement through credential cracking with custom salts, and a final privilege escalation leveraging a logic flaw in the Python `tarfile` module (**CVE-2025-4517**).
 
 ---
 
