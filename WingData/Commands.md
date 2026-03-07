@@ -1,4 +1,3 @@
-```markdown
 # WingData Command Reference Sheet
 
 This list documents every unique command used during the WingData assessment, categorized by the phase of the attack.
