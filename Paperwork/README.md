@@ -158,15 +158,14 @@ ss -lntup
 ```
 The service was then investigated locally.
 
-6. TCP/9100 — JetDirect
+6. TCP/9100 — 
 
 A scan of TCP/9100 was performed to identify the service.
 ```
 nmap -sV -p 9100 <TARGET_IP>
 ```
 The port was identified as a JetDirect/raw printing service.
-
-Screenshot
+ <img width="795" height="650" alt="Screenshot 2026-09-02 192824" src="https://github.com/user-attachments/assets/80a68f69-133c-48d1-b4a2-c0076ac8fc19" />
 
 The discovery of a printer service was important because printer
 protocols such as PJL can expose functionality beyond simply submitting
@@ -239,7 +238,8 @@ scheduled tasks
 credentials
 possible kernel exploits
 privilege-escalation vectors
-Screenshot
+<img width="798" height="1210" alt="Screenshot 2026-09-02 082710" src="https://github.com/user-attachments/assets/c02d2ad6-ca90-41ea-a37e-3b9ab9d002d9" />
+
 
 10. Kernel Exploit Candidates
 
@@ -251,7 +251,7 @@ The scan highlighted:
 DirtyClone — CVE-2026-43503
 pedit COW — CVE-2026-46331
 GhostLock — CVE-2026-43499
-Screenshot
+<img width="755" height="440" alt="Screenshot 2026-09-02 083302" src="https://github.com/user-attachments/assets/f22664f4-0fee-4bd4-910d-d710bb022699" />
 
 These findings were treated as potential attack paths, rather than
 automatically assuming that one of the kernel vulnerabilities was the
